@@ -1,0 +1,11 @@
+---
+animationAlreadyRunning: '§6» §7Your already opening a §6CRATE'
+fullInventory: '§6» §7Your inventory is §6FULL'
+noKeys: '§6» §7You must have a §6CRATE §7key to open crates'
+keyall: '§6» §l§f+{amount} {crate} §7key'
+mysql:
+  host: ""
+  username: ""
+  password: ""
+  database: ""
+...

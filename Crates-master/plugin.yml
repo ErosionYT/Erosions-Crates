@@ -1,0 +1,4 @@
+name: Crates
+main: ErosionYT\Crates\Crates
+load: POSTWORLD
+version: 1.0.0
