@@ -4,7 +4,7 @@ namespace ErosionYT\Crates\session;
 
 use ErosionYT\Crates\crate\Crate;
 use ErosionYT\Crates\Crates;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class SessionManager {
 

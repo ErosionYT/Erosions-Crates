@@ -6,7 +6,7 @@ use ErosionYT\Crates\crate\Crate;
 use ErosionYT\Crates\Crates;
 use ErosionYT\Crates\utils\FloatingTextParticle;
 use pocketmine\level\Position;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\plugin\PluginException;
 
 class Session {
@@ -104,8 +104,8 @@ class Session {
      * @throws PluginException
      */
     public function addFloatingText(Position $position, string $identifier, string $message): void {
-        if($position->getLevel() === null) {
-            throw new PluginException("Attempt to add a floating text particle with an invalid level.");
+        if($position->getWorld() === null) {
+            throw new PluginException("Attempt to add a floating text particle with an invalid World.");
         }
         $floatingText = new FloatingTextParticle($position, $identifier, $message);
         $this->particles[$identifier] = $floatingText;

@@ -3,7 +3,7 @@
 namespace ErosionYT\Crates\provider;
 
 use ErosionYT\Crates\Crates;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use SQLite3;
 use function sqlite_fetch_column_types;
 

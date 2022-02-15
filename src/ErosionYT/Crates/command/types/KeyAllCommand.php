@@ -8,7 +8,7 @@ use ErosionYT\Crates\Crates;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\TextFormat;
 
 class KeyAllCommand extends Command {
@@ -36,7 +36,9 @@ class KeyAllCommand extends Command {
                 $sender->sendMessage(TextFormat::DARK_RED . TextFormat::BOLD . "INVALID CRATE!");
                 return;
             }
+
             $amount = is_numeric($args[1]) ? (int)$args[1] : 1;
+
             /** @var Player $player */
             foreach(Crates::getInstance()->getServer()->getOnlinePlayers() as $player) {
                 $session = Crates::getInstance()->getSessionManager()->getSession($player);

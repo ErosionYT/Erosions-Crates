@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace ErosionYT\Crates\crate;
 
 use pocketmine\item\Item;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class ItemReward extends Reward {
 

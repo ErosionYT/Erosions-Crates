@@ -7,7 +7,7 @@ namespace ErosionYT\Crates\crate;
 use ErosionYT\Crates\Crates;
 use ErosionYT\Crates\crate\task\AnimationTask;
 use pocketmine\level\Position;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\TextFormat;
 
 class Crate {
@@ -53,7 +53,7 @@ class Crate {
         if($particle !== null) {
             return;
         }
-        $session->addFloatingText(Position::fromObject($this->getPosition()->add(0.5, 1.25, 0.5), $this->getPosition()->getLevel()), $this->identifier, $this->getDisplayName() . " Crate\n" . TextFormat::RESET . TextFormat::WHITE . "You have " . TextFormat::AQUA . $session->getKeysByCrate($this) . TextFormat::WHITE . " keys");
+        $session->addFloatingText(Position::fromObject($this->getPosition()->add(0.5, 1.25, 0.5), $this->getPosition()->getWorld()), $this->identifier, $this->getDisplayName() . " Crate\n" . TextFormat::RESET . TextFormat::WHITE . "You have " . TextFormat::AQUA . $session->getKeysByCrate($this) . TextFormat::WHITE . " keys");
     }
 
     /**

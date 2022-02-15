@@ -6,7 +6,7 @@ namespace ErosionYT\Crates\utils;
 
 use pocketmine\level\Level;
 use pocketmine\level\Position;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 
 class FloatingTextParticle extends \pocketmine\level\particle\FloatingTextParticle {
@@ -29,7 +29,7 @@ class FloatingTextParticle extends \pocketmine\level\particle\FloatingTextPartic
      */
     public function __construct(Position $pos, string $identifier, string $message) {
         parent::__construct($pos, "", "");
-        $this->level = $pos->getLevel();
+        $this->level = $pos->getWorld()->getFolderName();
         $this->identifier = $identifier;
         $this->message = $message;
         $this->update();

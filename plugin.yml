@@ -1,5 +1,19 @@
 name: Crates
 main: ErosionYT\Crates\Crates
-load: POSTWORLD
-version: 1.0.0
-api: 3.0.0
+author: ErosionYT
+version: 4.0.0
+api: 4.0.0
+
+commands:
+  KeyAllCommand:
+    description: Give a key to every player
+    permission: keyall.command
+  KeyCommand:
+    description: Give a key to a certain player
+    permission: key.command
+
+permissions:
+  keyall.command:
+    default: op
+  key.command:
+    default: op

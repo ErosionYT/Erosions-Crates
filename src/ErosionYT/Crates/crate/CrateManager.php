@@ -89,7 +89,7 @@ class CrateManager {
                 }
                 $position = (string)$config->get("position", "Undefined");
                 $position = explode(":", $position);
-                $position = new Position((int)$position[0], (int)$position[1], (int)$position[2], $this->plugin->getServer()->getLevelByName((string)$position[3]));
+                $position = new Position((int)$position[0], (int)$position[1], (int)$position[2], $this->plugin->getServer()->getWorldManager()->getWorldByName((string)$position[3]));
                 $crate = new Crate($name, $displayName, $identifier, $position, $rewards);
                 $this->addCrate($crate);
             }

@@ -8,7 +8,7 @@ use ErosionYT\Crates\Crates;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\TextFormat;
 
 class KeyCommand extends Command {
@@ -31,7 +31,7 @@ class KeyCommand extends Command {
                 $sender->sendMessage(TextFormat::YELLOW . $this->getUsage());
                 return;
             }
-            $player = Crates::getInstance()->getServer()->getPlayer($args[0]);
+            $player = Crates::getInstance()->getServer()->getPlayerByPrefix($args[0]);
             if(!$player instanceof Player) {
                 $sender->sendMessage(TextFormat::DARK_RED . TextFormat::BOLD . "INVALID PLAYER!");
                 return;

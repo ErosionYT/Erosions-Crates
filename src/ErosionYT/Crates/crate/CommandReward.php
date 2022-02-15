@@ -6,7 +6,7 @@ namespace ErosionYT\Crates\crate;
 
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\item\Item;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class CommandReward extends Reward {
 
